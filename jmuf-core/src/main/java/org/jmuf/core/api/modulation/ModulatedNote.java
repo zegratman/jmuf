@@ -44,6 +44,8 @@ public class ModulatedNote extends Note {
      * @param otherModulation the modulation to compose with.
      */
     public void composeModulation(NoteModulation otherModulation) {
-        this.noteModulation = (t) -> otherModulation.apply(this.noteModulation.apply(t));
+        NoteModulation oldModulation = this.noteModulation;
+        this.noteModulation = null; // important to break reference
+        this.noteModulation = t -> otherModulation.compose(oldModulation).apply(t);
     }
 }
