@@ -5,12 +5,9 @@ import org.jmuf.core.api.exception.JmufCoreException;
 import org.jmuf.core.api.note.Note;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.mockito.Mockito.when;
 
 /**
  * Test for {@link Note} base class
@@ -41,8 +38,6 @@ public class TestNote {
 
         // init
         JmufCore.init();
-
-        MockitoAnnotations.initMocks(this);
 
         testReferenceNote = new Note();
         testReferenceNote.setName(TEST_NOTE_NAME);
