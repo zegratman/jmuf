@@ -6,14 +6,14 @@ package org.jmuf.sample.classic.tempered.note;
 import org.jmuf.core.api.note.Note;
 import org.jmuf.core.api.note.Scale;
 import org.jmuf.sample.classic.ClassicalNoteDefinition;
-import org.jmuf.sample.classic.tempered.ClassicalTemperedConstants;
+import org.jmuf.sample.classic.tempered.TemperedConstants;
 
 /**
  * Enumeration of classical note names.
  * @author zegratman
  * @version $Id
  */
-public enum ClassicalTemperedNote {
+public enum TemperedNote {
     /** A, or La. */
     A(ClassicalNoteDefinition.A),
     /** B, or Si. */
@@ -39,9 +39,9 @@ public enum ClassicalTemperedNote {
      * Private constructor.
      * @param classicalNote the classical note name to which the tempered version applies
      */
-    ClassicalTemperedNote(final ClassicalNoteDefinition classicalNote) {
+    TemperedNote(final ClassicalNoteDefinition classicalNote) {
         this.europeName = classicalNote.getEuropeanName();
-        final Scale temperedScale =  ClassicalTemperedConstants.getBaseChromaticTemperedScale();
+        final Scale temperedScale =  TemperedConstants.getBaseChromaticTemperedScale();
         this.baseNote = temperedScale.getDegree(classicalNote.getDegree());
     }
     

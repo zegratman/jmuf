@@ -1,7 +1,7 @@
 package org.jmuf.sample.classic.tempered.alteration;
 
 import org.jmuf.core.api.alteration.NoteAlteration;
-import org.jmuf.sample.classic.tempered.ClassicalTemperedConstants;
+import org.jmuf.sample.classic.tempered.TemperedConstants;
 
 /**
  * Enumeration of note alterations in classical tempered music.
@@ -9,12 +9,14 @@ import org.jmuf.sample.classic.tempered.ClassicalTemperedConstants;
  * @author zegratman
  * @version $Id
  */
-public enum ClassicalTemperedAlteration {
+public enum TemperedAlteration {
 
+	/** Nonde alteration. */
+	NONE("", 1.0),
 	/** Sharp alteration. */
-	SHARP("#", ClassicalTemperedConstants.getTemperedInterval().getFrequencyRatio()),
+	SHARP("#", TemperedConstants.getTemperedInterval().getFrequencyRatio()),
 	/** Flat alteration. */
-	FLAT("b", 1.0 / ClassicalTemperedConstants.getTemperedInterval().getFrequencyRatio());
+	FLAT("b", 1.0 / TemperedConstants.getTemperedInterval().getFrequencyRatio());
 
 	/** Alteration Name. */
 	private String alterationName;
@@ -33,10 +35,10 @@ public enum ClassicalTemperedAlteration {
 	 * @param freqAlteration
 	 *            the frequency alteration
 	 */
-	ClassicalTemperedAlteration(final String alterName, final Double freqAlteration) {
+	TemperedAlteration(final String alterName, final Double freqAlteration) {
 		this.alterationName = alterName;
 		this.frequencyAlteration = freqAlteration;
-		this.alteration = new ClassicalTemperedNoteAlteration(this);
+		this.alteration = new TemperedNoteAlteration(this);
 	}
 
 	/**

@@ -2,9 +2,8 @@ package org.jmuf.sample.classic.tempered.note;
 
 import org.jmuf.core.api.JmufCoreHelper;
 import org.jmuf.core.api.exception.JmufCoreException;
-import org.jmuf.core.api.factory.NoteFactory;
 import org.jmuf.core.api.note.Note;
-import org.jmuf.sample.classic.tempered.alteration.ClassicalTemperedAlteration;
+import org.jmuf.sample.classic.tempered.alteration.TemperedAlteration;
 import org.jmuf.sample.exception.JmufSampleException;
 
 /**
@@ -27,7 +26,7 @@ public final class ChromaticTemperedNoteFactory {
 	 * @return the classical note
 	 * @throws JmufSampleException if problem occurs during note creation.
 	 */
-	public Note getClassicalNote(final ClassicalTemperedNote note, final ClassicalTemperedAlteration alteration,
+	public Note getClassicalNote(final TemperedNote note, final TemperedAlteration alteration,
 								 final Integer noteLevel) throws JmufSampleException {
 		try {
 			return alteration.getAlteration()

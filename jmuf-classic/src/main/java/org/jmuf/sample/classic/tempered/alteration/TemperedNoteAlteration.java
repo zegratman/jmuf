@@ -2,7 +2,6 @@ package org.jmuf.sample.classic.tempered.alteration;
 
 import org.jmuf.core.api.JmufCoreHelper;
 import org.jmuf.core.api.exception.JmufCoreException;
-import org.jmuf.core.api.factory.NoteFactory;
 import org.jmuf.core.api.note.Note;
 import org.jmuf.core.api.alteration.NoteAlteration;
 
@@ -12,10 +11,10 @@ import org.jmuf.core.api.alteration.NoteAlteration;
  * @author zegratman
  * @version $Id
  */
-public class ClassicalTemperedNoteAlteration extends NoteAlteration {
+public class TemperedNoteAlteration extends NoteAlteration {
 
 	/** Internal alteration. */
-	private ClassicalTemperedAlteration alteration;
+	private TemperedAlteration alteration;
 
 	/**
 	 * Constructor.
@@ -23,7 +22,7 @@ public class ClassicalTemperedNoteAlteration extends NoteAlteration {
 	 *            the alteration which is the base of the alteration
 	 *            implementation.
 	 */
-	public ClassicalTemperedNoteAlteration(final ClassicalTemperedAlteration alterationType) {
+	public TemperedNoteAlteration(final TemperedAlteration alterationType) {
 		super(alterationType.getName());
 		this.alteration = alterationType;
 	}
