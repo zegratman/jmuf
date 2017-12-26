@@ -40,11 +40,4 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-    <url>https://sourceforge.net/projects/jmuf/</url>
-    <issueManagement>
-        <url>https://sourceforge.net/p/jmuf/tickets/?source=navbar</url>
-    </issueManagement>
-    <ciManagement>
-        <url>http://localhost:8080/job/jmuf-core/</url>
-    </ciManagement>
 </project>

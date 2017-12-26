@@ -1,6 +1,5 @@
-package org.jmuf.core.test;
+package org.jmuf.core.api;
 
-import org.jmuf.core.api.JmufCore;
 import org.jmuf.core.api.exception.JmufCoreException;
 import org.jmuf.core.api.modulation.ModulatedNote;
 import org.jmuf.core.api.modulation.NoteModulation;
@@ -11,7 +10,6 @@ import org.junit.Test;
 import java.util.Random;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Test for {@link Note} base class
@@ -24,12 +22,7 @@ public class TestModulatedNote {
 
     private static final String TEST_NOTE_NAME = "Gb";
     private static final Double TEST_NOTE_BASEFREQ = 25.23456;
-    private static final Double TEST_NOTE_LOW_BF = 20.14263;
-    private static final Double TEST_NOTE_BAD_BF = 66.6666;
     private static final Integer TEST_NOTE_LEVEL = 4;
-    private static final Integer TEST_NOTE_HIGH_LEVEL = 6;
-    private static final Integer TEST_NOTE_BAD_LEVEL = -2;
-    private static final Double TEST_NOTE_REALFREQUENCY = 403.75296;
 
     private ModulatedNote testReferenceNote;
 
